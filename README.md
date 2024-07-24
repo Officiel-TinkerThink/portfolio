@@ -20,59 +20,61 @@ CV. Karya Hidup Sentosa (QUICK TRACTOR) | Jan 2022 - Feb 2022
 - Developed quality maintenance systems for agricultural vehicle manufacturing
 - Analyzed consumer claims, identified root causes, and implemented corrective solutions
 
-### Internship Engineer
-Pembangkitan Jawa Bali (PJB) | April 2023 - October 2023
-- Conducted daily preventive maintenance for 1 MW Solar Energy Research Plant
-- Researched soiling effects on photovoltaic output power, optimizing cleaning methods
-
-## Organizations
-
-- **Keluarga Mahasiswa Teknik Mesin UGM (KMTM)** - Member of Sport Division (2019-2022)
-- **Bola & Futsal UGM** - Student Athlete (2018-2022)
-- **Gadjah Mada Football Club (GAMA FC)** - Athlete, 3rd tier Indonesian National League (2018-2022)
 
 ## Courses & Training
 
-### Harvard CS50 Python
-- Mastered advanced Python concepts through challenging problem-solving
-- Project: ["ARITHMATHGEEK"](https://github.com/YourUsername/ARITHMATHGEEK) - A Wordle-like terminal-based app
-
-### Harvard CS50 SQL
-- Proficient in SQLite, MySQL, PostgreSQL
-- Project: ["English Premier League Databases"](https://github.com/YourUsername/EPL-Database)
-
-### MITx: Machine Learning with Python (Ongoing)
-- Implementing fundamental ML algorithms with increasing complexity
-- Project: [Automatic Review Analyzer](https://github.com/YourUsername/Review-Analyzer)
+### Purwadhika Digital Talent Scholarship (DTI) (Ongoing)
+- Mastering Python, MySQL, Data Analysis (Tableau), and Comprehensive Machine Learning & Cloud Computing
 
 ### Deeplearning.ai Machine Learning Specialization
 - Completed courses on supervised learning, unsupervised learning, recommender systems, and reinforcement learning
 - Gained practical skills through real-world problem-solving
 
-### Purwadhika Digital Talent Scholarship (DTI) (Ongoing)
-- Mastering Python, MySQL, Data Analysis (Tableau), and Comprehensive Machine Learning
-- Projects:
-  - [American Roulette Terminal Based Game (CRUD)](https://github.com/YourUsername/American-Roulette)
-  - [NYC Taxi & Limousine Commission Data Analysis](https://github.com/YourUsername/NYC-Taxi-Analysis)
-    - [Dashboard](https://your-dashboard-link.com) | [Tableau Story](https://your-tableau-story-link.com)
+### MITx: Machine Learning with Python (Ongoing)
+- Implementing fundamental ML algorithms with increasing complexity
 
-## Technical Skills
+### Harvard CS50 SQL
+- Proficient in SQLite, MySQL, PostgreSQL
 
-- **Programming**: Python, SQL
-- **Data Analysis**: Tableau
-- **Machine Learning**: Supervised Learning, Unsupervised Learning, Neural Networks
-- **Version Control**: Git
+### Harvard CS50 Python
+- Mastered advanced Python concepts through challenging problem-solving
 
-## Languages
+   
+## Projects
 
-- **English**: TOEFL score 530/677, Fluent speaker (7/10)
-- **Indonesian**: Native
+### Basic Python
+- ["ARITHMATHGEEK"](https://github.com/YourUsername/ARITHMATHGEEK) - A Wordle-like terminal-based app
+- [American Roulette Terminal Based Game (CRUD)](https://github.com/YourUsername/American-Roulette)
+
+### Database
+- ["English Premier League Databases"](https://github.com/YourUsername/EPL-Database)
+
+### Data Analysis
+- [NYC Taxi & Limousine Commission Data Analysis](https://github.com/YourUsername/NYC-Taxi-Analysis)
+- [Dashboard](https://your-dashboard-link.com) | [Tableau Story](https://your-tableau-story-link.com)
+
+### Data Science & Machine Learning
+- [Automatic Review Analyzer](https://github.com/YourUsername/Review-Analyzer)
+ 
+
 
 ## Additional Writings
 
 - [Unleashing Python's Hidden Power: Calling Variables by Their "Names"](https://your-blog-link.com/python-power)
 - [Understanding Concurrency Issues in SQL Databases](https://your-blog-link.com/sql-concurrency)
 
----
+
+
+## Technical Skills
+
+- **Programming**: Python, SQL
+- **Data Analysis**: Tableau
+- **Machine Learning**: Supervised Learning, Unsupervised Learning, Neural Networks
+
+
+## Languages
+
+- **English**: TOEFL score 530/677, Fluent speaker (7/10)
+- **Indonesian**: Native
 
 *Last Updated: June 26, 2024*
