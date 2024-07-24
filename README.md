@@ -4,12 +4,16 @@
 
 A skeptical and rational problem-solver with a passion for mathematics and engaging discussions. Self-taught and proactive, I constantly seek new knowledge, particularly in Philosophy, Biography, and Science.
 
+<br>
+
 ## Education
 
 **Bachelor of Engineering - BE, Mechanical Engineering**  
 Universitas Gadjah Mada (2018 - 2022)
 - Focus: Energy Conversion
 - Thesis: Aerodynamics investigation of Lift and Drag Coefficient of Sukhoi SSJ 100 using water tunnel
+
+<br>
 
 ## Experience
 
@@ -18,18 +22,19 @@ CV. Karya Hidup Sentosa (QUICK TRACTOR) | Jan 2022 - Feb 2022
 - Developed quality maintenance systems for agricultural vehicle manufacturing
 - Analyzed consumer claims, identified root causes, and implemented corrective solutions
 
+<br>
 
 ## Courses & Training
 
 ### Purwadhika Digital Talent Scholarship (DTI) (Ongoing)
 - Mastering Python, MySQL, Data Analysis (Tableau), and Comprehensive Machine Learning & Cloud Computing
 
+### MITx: Machine Learning with Python (Ongoing)
+- Implementing fundamental ML algorithms with increasing complexity
+
 ### Deeplearning.ai Machine Learning Specialization
 - Completed courses on supervised learning, unsupervised learning, recommender systems, and reinforcement learning
 - Gained practical skills through real-world problem-solving
-
-### MITx: Machine Learning with Python (Ongoing)
-- Implementing fundamental ML algorithms with increasing complexity
 
 ### Harvard CS50 SQL
 - Proficient in SQLite, MySQL, PostgreSQL
@@ -37,7 +42,8 @@ CV. Karya Hidup Sentosa (QUICK TRACTOR) | Jan 2022 - Feb 2022
 ### Harvard CS50 Python
 - Mastered advanced Python concepts through challenging problem-solving
 
-   
+<br>
+
 ## Projects
 
 ### Basic Python
@@ -53,22 +59,20 @@ CV. Karya Hidup Sentosa (QUICK TRACTOR) | Jan 2022 - Feb 2022
 
 ### Data Science & Machine Learning
 - [Automatic Review Analyzer](https://github.com/YourUsername/Review-Analyzer)
+- [Hotel Booking Demand](https://github.com/Officiel-TinkerThink/Hotel-Booking-Demand)
  
 
+<br>
 
 ## Additional Writings
 
 - [Unleashing Python's Hidden Power: Calling Variables by Their "Names"](https://your-blog-link.com/python-power)
 - [Understanding Concurrency Issues in SQL Databases](https://your-blog-link.com/sql-concurrency)
+- [Learning From Basics : Perceptron Algorithm, The Origin of Sophisticated Deep Learning](https://medium.com/@bornouksyn497/learning-from-basics-perceptron-algorithm-the-origin-of-sophisticated-deep-learning-f8ccca29692d)
+- [Introduction to Parallel Computing : The Core Concept of Cloud Computing](https://medium.com/@bornouksyn497/introduction-to-parallel-computing-the-core-concept-of-cloud-computing-997c7a84ed27)
 
 
-
-## Technical Skills
-
-- **Programming**: Python, SQL
-- **Data Analysis**: Tableau
-- **Machine Learning**: Supervised Learning, Unsupervised Learning, Neural Networks
-
+<br>
 
 ## Languages
 
