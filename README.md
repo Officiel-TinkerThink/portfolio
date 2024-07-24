@@ -1,5 +1,3 @@
-# Wahyu Bornok Augus Sinurat
-
 📧 bornouksyn497@gmail.com | 📱 +62-812-5666-3442 | 🌐 [GitHub: Officiel-TinkerThink](https://github.com/Officiel-TinkerThink)
 
 ## Profile
