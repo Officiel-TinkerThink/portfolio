@@ -830,7 +830,7 @@ section,
 }
 
 .portfolio .portfolio-content .portfolio-info {
-  opacity: 0;
+  visibility: hidden;
   position: absolute;
   inset: 0;
   z-index: 3;
@@ -840,7 +840,9 @@ section,
 }
 
 .portfolio .portfolio-content .portfolio-info h4 {
-  font-size: 14px;
+  visibility: visible;
+  transition: None;
+  font-size: 16px;
   padding: 5px 10px;
   font-weight: 400;
   color: #ffffff;
@@ -848,16 +850,19 @@ section,
   background-color: var(--accent-color);
 }
 
+
 .portfolio .portfolio-content .portfolio-info p {
+  opacity: 1;
   position: absolute;
-  bottom: 10px;
-  text-align: center;
+  bottom: -15px;
+  text-align: justify;
   display: inline-block;
-  left: 0;
-  right: 0;
-  font-size: 16px;
+  left: 5px;
+  right: 5px;
+  font-size: 15px;
   font-weight: 600;
   color: rgba(255, 255, 255, 0.8);
+  background-color: var(--default-color);
 }
 
 .portfolio .portfolio-content .portfolio-info .preview-link,
@@ -865,7 +870,7 @@ section,
   position: absolute;
   left: calc(50% - 40px);
   font-size: 26px;
-  top: calc(50% - 14px);
+  top: calc(30% - 14px);
   color: #fff;
   transition: 0.3s;
   line-height: 1.2;
@@ -883,7 +888,7 @@ section,
 }
 
 .portfolio .portfolio-content:hover .portfolio-info {
-  opacity: 1;
+  visibility: visible;
 }
 
 .portfolio .portfolio-content:hover img {
