@@ -14,6 +14,16 @@ const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent('Hi Wahyu, I
 
 export default function Contact() {
   const [status, setStatus] = useState('idle') // idle | sending | sent | error
+  const [copied, setCopied] = useState(false)
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(profile.email)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch { /* clipboard blocked — mailto still fires via href */ }
+  }
+
   const onSubmit = async (e) => {
     e.preventDefault()
     const form = e.currentTarget
@@ -48,7 +58,8 @@ export default function Contact() {
       <div className="mt-10 grid gap-8 md:grid-cols-2">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className="card flex items-center"><SocialIcon name="geo" className="w-5 h-5 text-accent" /> <span className="ml-2">{profile.location}</span></div>
-          <a className="card mt-3 flex items-center hover:border-accent" href={`mailto:${profile.email}`}><SocialIcon name="envelope" className="w-5 h-5 text-accent" /> <span className="ml-2">{profile.email}</span></a>
+          <a className="card mt-3 flex items-center hover:border-accent" href={`mailto:${profile.email}`} onClick={copyEmail}><SocialIcon name="envelope" className="w-5 h-5 text-accent" /> <span className="ml-2">{profile.email}</span></a>
+          {copied && <p className="mt-1 text-xs text-accent">✓ Email copied to clipboard</p>}
           <a className="card mt-3 flex items-center hover:border-accent" href={waLink} target="_blank" rel="noreferrer"><SocialIcon name="whatsapp" className="w-5 h-5 text-accent" /> <span className="ml-2">{profile.phone}</span></a>
           <button onClick={mailto} className="btn-primary mt-5">Email me directly →</button>
         </motion.div>
