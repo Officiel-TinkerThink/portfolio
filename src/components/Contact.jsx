@@ -48,8 +48,8 @@ export default function Contact() {
       <div className="mt-10 grid gap-8 md:grid-cols-2">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
           <div className="card flex items-center"><SocialIcon name="geo" className="w-5 h-5 text-accent" /> <span className="ml-2">{profile.location}</span></div>
-          <div className="card mt-3 flex items-center"><SocialIcon name="envelope" className="w-5 h-5 text-accent" /> <a className="ml-2 hover:text-accent" href={`mailto:${profile.email}`}>{profile.email}</a></div>
-          <div className="card mt-3 flex items-center"><SocialIcon name="whatsapp" className="w-5 h-5 text-accent" /> <a className="ml-2 hover:text-accent" href={waLink} target="_blank" rel="noreferrer">{profile.phone}</a></div>
+          <a className="card mt-3 flex items-center hover:border-accent" href={`mailto:${profile.email}`}><SocialIcon name="envelope" className="w-5 h-5 text-accent" /> <span className="ml-2">{profile.email}</span></a>
+          <a className="card mt-3 flex items-center hover:border-accent" href={waLink} target="_blank" rel="noreferrer"><SocialIcon name="whatsapp" className="w-5 h-5 text-accent" /> <span className="ml-2">{profile.phone}</span></a>
           <button onClick={mailto} className="btn-primary mt-5">Email me directly →</button>
         </motion.div>
 
