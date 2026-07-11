@@ -3,13 +3,15 @@ import { motion } from 'framer-motion'
 import { projects } from '../data'
 
 export default function Portfolio() {
-  const cats = ['All', 'Most hot', ...Array.from(new Set(projects.map((p) => p.cat)))]
+  const fixedCats = ['AI Agents', 'AI Games', 'Machine Learning', 'Data', 'Apps']
+  const presentCats = Array.from(new Set(projects.flatMap((p) => p.cats || [p.cat])))
+  const cats = ['All', 'Most hot', ...fixedCats.filter((c) => presentCats.includes(c))]
   const [active, setActive] = useState('All')
   const shown = active === 'All'
     ? projects
     : active === 'Most hot'
       ? projects.filter((p) => (p.tags || []).includes('hot'))
-      : projects.filter((p) => p.cat === active)
+      : projects.filter((p) => (p.cats || [p.cat]).includes(active))
   return (
     <section id="portfolio" className="section">
       <span className="eyebrow">Portfolio</span>
@@ -70,7 +72,7 @@ export default function Portfolio() {
                 <img src={p.img} alt={p.name} className="h-44 w-full object-cover transition duration-500 group-hover:scale-105" />
               </div>
               <div className="p-5">
-                <span className="text-xs font-mono text-accent">{p.cat}</span>
+                <span className="text-xs font-mono text-accent">{(p.cats || [p.cat])[0]}</span>
                 <h3 className="mt-1 font-semibold text-white">{p.name}</h3>
                 <p className="mt-2 text-sm text-muted">{p.desc}</p>
                 <span className="mt-3 inline-block text-sm text-accent">{p.url.includes('github.com') ? 'View source →' : 'Visit site →'}</span>
