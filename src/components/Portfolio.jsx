@@ -48,7 +48,7 @@ export default function Portfolio() {
                 <span className="absolute right-3 top-3 rounded-full border border-white/20 bg-ink/70 px-2.5 py-1 text-xs font-mono text-slate-300">Confidential</span>
               </div>
               <div className="p-5">
-                <span className="text-xs font-mono text-accent">{p.cat}</span>
+                <span className="text-xs font-mono text-accent">Confidential</span>
                 <h3 className="mt-1 font-semibold text-white">{p.name}</h3>
                 <p className="mt-2 text-sm text-muted">{p.desc}</p>
                 <span className="mt-3 inline-block text-sm text-slate-500">In progress</span>
