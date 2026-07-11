@@ -3,9 +3,13 @@ import { motion } from 'framer-motion'
 import { projects } from '../data'
 
 export default function Portfolio() {
-  const cats = ['All', ...Array.from(new Set(projects.map((p) => p.cat)))]
+  const cats = ['All', 'Most hot', ...Array.from(new Set(projects.map((p) => p.cat)))]
   const [active, setActive] = useState('All')
-  const shown = active === 'All' ? projects : projects.filter((p) => p.cat === active)
+  const shown = active === 'All'
+    ? projects
+    : active === 'Most hot'
+      ? projects.filter((p) => (p.tags || []).includes('hot'))
+      : projects.filter((p) => p.cat === active)
   return (
     <section id="portfolio" className="section">
       <span className="eyebrow">Portfolio</span>
