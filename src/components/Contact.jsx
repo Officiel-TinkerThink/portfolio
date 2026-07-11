@@ -76,6 +76,10 @@ export default function Contact() {
           className="card space-y-3"
           onSubmit={onSubmit}
         >
+          <div className="mb-1 border-b border-white/10 pb-3">
+            <h3 className="font-mono text-lg font-semibold text-accent">Send me a message</h3>
+            <p className="mt-1 text-sm text-slate-400">You can instantly send me a message below — it lands straight in my inbox.</p>
+          </div>
           <input required name="name" placeholder="Your name" className="w-full rounded-lg border border-white/10 bg-ink/60 px-4 py-3 outline-none focus:border-accent" />
           <input required type="email" name="email" placeholder="Your email" className="w-full rounded-lg border border-white/10 bg-ink/60 px-4 py-3 outline-none focus:border-accent" />
           <input required name="subject" placeholder="Subject" className="w-full rounded-lg border border-white/10 bg-ink/60 px-4 py-3 outline-none focus:border-accent" />
