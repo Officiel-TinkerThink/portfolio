@@ -33,6 +33,10 @@ export default function Contact() {
     }
     setStatus('sending')
     const data = Object.fromEntries(new FormData(form).entries())
+    const visitorSubject = (data.subject || '').toString().trim()
+    data.subject = visitorSubject
+      ? `[personal-website reach out] ${visitorSubject}`
+      : '[personal-website reach out]'
     try {
       const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
@@ -75,7 +79,7 @@ export default function Contact() {
           <input required name="name" placeholder="Your name" className="w-full rounded-lg border border-white/10 bg-ink/60 px-4 py-3 outline-none focus:border-accent" />
           <input required type="email" name="email" placeholder="Your email" className="w-full rounded-lg border border-white/10 bg-ink/60 px-4 py-3 outline-none focus:border-accent" />
           <input required name="subject" placeholder="Subject" className="w-full rounded-lg border border-white/10 bg-ink/60 px-4 py-3 outline-none focus:border-accent" />
-          <textarea required rows="4" name="message" placeholder="Message" className="w-full rounded-lg border border-white/10 bg-ink/60 px-4 py-3 outline-none focus:border-accent" />
+          <textarea required rows="4" name="message" placeholder="Write your message here..." className="w-full rounded-lg border border-white/10 bg-ink/60 px-4 py-3 outline-none focus:border-accent" />
           <input type="hidden" name="to" value={profile.email} />
           <input type="hidden" name="from_name" value="Portfolio Contact Form" />
           <button type="submit" disabled={status === 'sending'} className="btn-primary w-full justify-center">
