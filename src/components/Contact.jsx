@@ -1,13 +1,43 @@
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { profile } from '../data'
 import SocialIcon from './SocialIcon'
 
+const mailto = () => {
+  const subj = encodeURIComponent('Project inquiry')
+  const body = encodeURIComponent('Hi Wahyu,\n\nI saw your portfolio and would like to discuss a project...\n\n')
+  window.location.href = `mailto:${profile.email}?subject=${subj}&body=${body}`
+}
+
 export default function Contact() {
-  const mailto = () => {
-    const subj = encodeURIComponent('Project inquiry')
-    const body = encodeURIComponent('Hi Wahyu,\n\nI saw your portfolio and would like to discuss a project...\n\n')
-    window.location.href = `mailto:${profile.email}?subject=${subj}&body=${body}`
+  const [status, setStatus] = useState('idle') // idle | sending | sent | error
+  const onSubmit = async (e) => {
+    e.preventDefault()
+    const form = e.currentTarget
+    if (!profile.contactFormKey || profile.contactFormKey === 'YOUR_WEB3FORMS_ACCESS_KEY') {
+      setStatus('error')
+      return
+    }
+    setStatus('sending')
+    const data = Object.fromEntries(new FormData(form).entries())
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ access_key: profile.contactFormKey, ...data }),
+      })
+      const json = await res.json()
+      if (json.success) {
+        setStatus('sent')
+        form.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
   }
+
   return (
     <section id="contact" className="section">
       <span className="eyebrow">Contact</span>
@@ -19,20 +49,26 @@ export default function Contact() {
           <div className="card mt-3 flex items-center"><SocialIcon name="whatsapp" className="w-5 h-5 text-accent" /> <span className="ml-2">{profile.phone}</span></div>
           <button onClick={mailto} className="btn-primary mt-5">Email me directly →</button>
         </motion.div>
+
         <motion.form
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.1 }}
           className="card space-y-3"
-          onSubmit={(e) => { e.preventDefault(); mailto() }}
+          onSubmit={onSubmit}
         >
-          <input required placeholder="Your name" className="w-full rounded-lg border border-white/10 bg-ink/60 px-4 py-3 outline-none focus:border-accent" />
-          <input required type="email" placeholder="Your email" className="w-full rounded-lg border border-white/10 bg-ink/60 px-4 py-3 outline-none focus:border-accent" />
-          <input required placeholder="Subject" className="w-full rounded-lg border border-white/10 bg-ink/60 px-4 py-3 outline-none focus:border-accent" />
-          <textarea required rows="4" placeholder="Message" className="w-full rounded-lg border border-white/10 bg-ink/60 px-4 py-3 outline-none focus:border-accent" />
-          <button type="submit" className="btn-primary w-full justify-center">Send Message</button>
-          <p className="text-center text-xs text-muted">Opens your email app — no server needed.</p>
+          <input required name="name" placeholder="Your name" className="w-full rounded-lg border border-white/10 bg-ink/60 px-4 py-3 outline-none focus:border-accent" />
+          <input required type="email" name="email" placeholder="Your email" className="w-full rounded-lg border border-white/10 bg-ink/60 px-4 py-3 outline-none focus:border-accent" />
+          <input required name="subject" placeholder="Subject" className="w-full rounded-lg border border-white/10 bg-ink/60 px-4 py-3 outline-none focus:border-accent" />
+          <textarea required rows="4" name="message" placeholder="Message" className="w-full rounded-lg border border-white/10 bg-ink/60 px-4 py-3 outline-none focus:border-accent" />
+          <input type="hidden" name="to" value={profile.email} />
+          <input type="hidden" name="from_name" value="Portfolio Contact Form" />
+          <button type="submit" disabled={status === 'sending'} className="btn-primary w-full justify-center">
+            {status === 'sending' ? 'Sending…' : 'Send Message'}
+          </button>
+          {status === 'sent' && <p className="text-center text-sm text-accent">✓ Message sent — I'll get it by email.</p>}
+          {status === 'error' && <p className="text-center text-sm text-red-400">Couldn't send. Please email me directly at {profile.email}.</p>}
         </motion.form>
       </div>
     </section>

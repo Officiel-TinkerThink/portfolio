@@ -12,6 +12,8 @@ export const profile = {
     linkedin: 'https://linkedin.com/in/wahyubornok',
     medium: 'https://medium.com/@bornouksyn497',
   },
+  // Web3Forms access key (free): https://web3forms.com
+  contactFormKey: '056497c1-ec9b-44c7-b3b5-34cfe5b3ca30',
 }
 
 export const services = [
