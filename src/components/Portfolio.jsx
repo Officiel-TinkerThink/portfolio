@@ -10,7 +10,7 @@ export default function Portfolio() {
     <section id="portfolio" className="section">
       <span className="eyebrow">Portfolio</span>
       <h2 className="text-3xl font-bold md:text-4xl">Selected work</h2>
-      <p className="mt-3 max-w-xl text-muted">AI & software projects — each links to the source.</p>
+      <p className="mt-3 max-w-xl text-muted">AI & software projects — click any card to explore the source or live site.</p>
       <div className="mt-8 flex flex-wrap gap-2">
         {cats.map((c) => (
           <button
@@ -46,7 +46,7 @@ export default function Portfolio() {
               <span className="text-xs font-mono text-accent">{p.cat}</span>
               <h3 className="mt-1 font-semibold text-white">{p.name}</h3>
               <p className="mt-2 text-sm text-muted">{p.desc}</p>
-              <span className="mt-3 inline-block text-sm text-accent">View source →</span>
+              <span className="mt-3 inline-block text-sm text-accent">{p.url.includes('github.com') ? 'View source →' : 'Visit site →'}</span>
             </div>
           </motion.a>
         ))}
