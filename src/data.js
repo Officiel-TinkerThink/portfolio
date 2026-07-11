@@ -61,8 +61,11 @@ export const education = [
 ]
 
 export const certs = [
-  'Harvard CS50 — Introduction to AI with Python (2024)',
-  'MITx — Machine Learning with Python: from Linear Models to Deep Learning (2024)',
+  { name: 'Harvard CS50 — Introduction to AI with Python', url: 'https://certificates.cs50.io/0f8dbbe8-218d-4f5a-bc6e-297ab6589bca.pdf?size=letter' },
+  { name: 'Harvard CS50 — Introduction to Databases with SQL', url: 'https://certificates.cs50.io/0f8dbbe8-218d-4f5a-bc6e-297ab6589bca.pdf?size=letter' },
+  { name: 'MITx — Machine Learning with Python: from Linear Models to Deep Learning', url: 'https://courses.edx.org/certificates/6a81c333c32749a8b4437e40757b7a24' },
+  { name: 'MITx — Fundamentals of Statistics', url: 'https://courses.edx.org/certificates/73568808ec1c49bea9b2e7a0f40f79a6' },
+  { name: 'MITx — Probability', url: 'https://courses.edx.org/certificates/5da1b1635daa48f880bbae9957e60e0e' },
 ]
 
 export const projects = [

@@ -32,7 +32,11 @@ export default function Resume() {
           <h3 className="mb-4 mt-8 font-mono text-accent">Certifications</h3>
           <div className="card">
             <ul className="list-disc space-y-1 pl-5 text-sm text-slate-300">
-              {certs.map((c) => <li key={c}>{c}</li>)}
+              {certs.map((c) => (
+                <li key={c.name}>
+                  <a className="hover:text-accent" href={c.url} target="_blank" rel="noreferrer">{c.name} ↗</a>
+                </li>
+              ))}
             </ul>
           </div>
         </motion.div>
