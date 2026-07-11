@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { profile } from '../data'
+import SocialIcon from './SocialIcon'
 
 export default function Contact() {
   const mailto = () => {
@@ -13,9 +14,9 @@ export default function Contact() {
       <h2 className="text-3xl font-bold md:text-4xl">Have a project? Let's talk.</h2>
       <div className="mt-10 grid gap-8 md:grid-cols-2">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <div className="card"><i className="bi bi-geo-alt text-accent" /> <span className="ml-2">{profile.location}</span></div>
-          <div className="card mt-3"><i className="bi bi-envelope text-accent" /> <a className="ml-2 hover:text-accent" href={`mailto:${profile.email}`}>{profile.email}</a></div>
-          <div className="card mt-3"><i className="bi bi-whatsapp text-accent" /> <span className="ml-2">{profile.phone}</span></div>
+          <div className="card flex items-center"><SocialIcon name="geo" className="w-5 h-5 text-accent" /> <span className="ml-2">{profile.location}</span></div>
+          <div className="card mt-3 flex items-center"><SocialIcon name="envelope" className="w-5 h-5 text-accent" /> <a className="ml-2 hover:text-accent" href={`mailto:${profile.email}`}>{profile.email}</a></div>
+          <div className="card mt-3 flex items-center"><SocialIcon name="whatsapp" className="w-5 h-5 text-accent" /> <span className="ml-2">{profile.phone}</span></div>
           <button onClick={mailto} className="btn-primary mt-5">Email me directly →</button>
         </motion.div>
         <motion.form

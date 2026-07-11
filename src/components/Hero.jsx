@@ -37,9 +37,9 @@ export default function Hero() {
             <a href="#portfolio" className="btn-ghost">See my work</a>
           </div>
           <div className="mt-10 flex gap-5 text-slate-400">
-            <a href={profile.socials.github} target="_blank" rel="noreferrer" className="transition hover:text-accent"><i className="bi bi-github text-2xl" /></a>
-            <a href={profile.socials.linkedin} target="_blank" rel="noreferrer" className="transition hover:text-accent"><i className="bi bi-linkedin text-2xl" /></a>
-            <a href={profile.socials.medium} target="_blank" rel="noreferrer" className="transition hover:text-accent"><i className="bi bi-medium text-2xl" /></a>
+            <a href={profile.socials.github} target="_blank" rel="noreferrer" className="transition hover:text-accent"><SocialIcon name="github" className="w-6 h-6" /></a>
+            <a href={profile.socials.linkedin} target="_blank" rel="noreferrer" className="transition hover:text-accent"><SocialIcon name="linkedin" className="w-6 h-6" /></a>
+            <a href={profile.socials.medium} target="_blank" rel="noreferrer" className="transition hover:text-accent"><SocialIcon name="medium" className="w-6 h-6" /></a>
           </div>
         </motion.div>
       </div>
@@ -48,6 +48,7 @@ export default function Hero() {
 }
 
 import { useEffect, useState } from 'react'
+import SocialIcon from './SocialIcon'
 function RotatingRoles({ roles }) {
   const [i, setI] = useState(0)
   useEffect(() => {

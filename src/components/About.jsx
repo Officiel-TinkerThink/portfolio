@@ -30,7 +30,7 @@ export default function About() {
         </motion.div>
         <motion.div {...reveal} className="relative">
           <div className="relative overflow-hidden rounded-3xl border border-white/10">
-            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&q=70" alt="AI code" className="h-full w-full object-cover" />
+            <img src="/portfolio/img/about.svg" alt="Applied AI" className="h-full w-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/80 to-transparent" />
           </div>
         </motion.div>
