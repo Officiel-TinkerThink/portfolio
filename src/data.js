@@ -6,7 +6,7 @@ export const profile = {
   email: 'bornouksyn497@gmail.com',
   phone: '+62 812 5666 3442',
   summary:
-    "I build applied AI — LLM agents, RAG systems, and machine-learning models wrapped in clean, reliable software. From notebook to deployed product.",
+    'Data-driven critical thinker and problem-solver with a strong engineering foundation. I build applied AI — LLM agents, RAG systems, and ML models (CV, NLP, RL) wrapped in clean, reliable software — from notebook to deployed product.',
   socials: {
     github: 'https://github.com/Officiel-TinkerThink',
     linkedin: 'https://linkedin.com/in/wahyubornok',
@@ -24,13 +24,29 @@ export const services = [
 ]
 
 export const skills = [
-  { group: 'Languages & Core', items: ['Python (OOP, async, metaclasses)', 'SQL', 'JavaScript / TypeScript', 'Bash / Linux'] },
-  { group: 'AI / ML', items: ['PyTorch', 'TensorFlow / Keras', 'Scikit-learn', 'LangChain / LangGraph', 'RAG & Embeddings', 'Computer Vision', 'Reinforcement Learning'] },
-  { group: 'Data & Infra', items: ['Pandas / NumPy', 'PySpark / Spark', 'PostgreSQL / MySQL', 'MongoDB / Qdrant (vectors)', 'Docker', 'Google Cloud (GCP)'] },
-  { group: 'Web & Tools', items: ['FastAPI', 'React', 'Tableau', 'Git', 'REST APIs', 'CI/CD basics'] },
+  { group: 'Languages & Core', items: ['Advanced Python (OOP, async, metaclasses)', 'Advanced JavaScript / TypeScript', 'SQL', 'Bash / Linux'] },
+  { group: 'AI / ML', items: ['PyTorch', 'TensorFlow / Keras', 'Scikit-learn', 'LangChain / LangGraph', 'RAG & Embeddings', 'Computer Vision (OpenCV, YOLO)', 'Reinforcement Learning', 'Experiment tracking (WandB, Comet)'] },
+  { group: 'Data & Infra', items: ['Pandas / NumPy', 'PySpark / Apache Spark', 'PostgreSQL / MySQL', 'MongoDB / Qdrant (vectors)', 'Hadoop', 'Docker', 'Google Cloud (GCP)'] },
+  { group: 'Web & Tools', items: ['FastAPI', 'React / ReactTS', 'Node.js', 'REST APIs', 'Git', 'CI/CD basics'] },
 ]
 
 export const experience = [
+  { role: 'Data Scientist', org: 'Medela Potentia Tbk', period: 'May 2026 – Present', loc: 'Bintaro, Indonesia',
+    points: [
+      'Building and shipping data-science solutions that turn business data into measurable impact.',
+    ] },
+  { role: 'Data Scientist (Freelance)', org: 'Manulife', period: 'Dec 2025 – Apr 2026', loc: 'Remote',
+    points: [
+      'Designed and built an end-to-end pipeline for an AI Knowledge Base.',
+      'Built a robust evaluation framework measuring indexing quality, retrieval performance, and system trustworthiness.',
+      'Collaborated with cross-functional, cross-country teams to align technical work with organizational objectives.',
+    ] },
+  { role: 'AI/ML Engineer (Freelance)', org: 'Beaverhand Inc', period: 'Aug 2025 – Dec 2025', loc: 'Remote',
+    points: [
+      'Managed and maintained an AI-powered SaaS platform — reliability and scalability.',
+      'Designed, experimented, and optimized ML models to improve performance and UX.',
+      'Developed and managed the end-to-end inference pipeline.',
+    ] },
   { role: 'Data Engineer & AI Engineer', org: 'Ameliore Solusi Analitika', period: 'Dec 2024 – Jun 2025', loc: 'Jakarta, Indonesia',
     points: ['Data migration & maintenance for Direktorat Jenderal Pajak (legacy → new system).', 'Led the new AI team exploring LLM & Agentic AI; built an AI product prototype.'] },
   { role: 'Quality Assurance', org: 'CV. Karya Hidup Sentosa (QUICK TRAKTOR)', period: 'Mar 2023 – Oct 2023', loc: 'Kulon Progo, Indonesia',
@@ -38,25 +54,29 @@ export const experience = [
 ]
 
 export const education = [
+  { school: 'Universitas Gadjah Mada', degree: 'Bachelor, Mechanical Engineering · GPA 3.57/4.00', period: '2018 – 2022', },
   { school: 'Purwadhika Digital School', degree: 'Data Science & Machine Learning', period: '2024' },
-  { school: 'Universitas Gadjah Mada', degree: 'Bachelor, Mechanical Engineering', period: '2018 – 2022' },
 ]
 
 export const certs = [
   'Harvard CS50 — Introduction to AI with Python (2024)',
-  'Harvard CS50 — Introduction to Databases with SQL (2024)',
-  'MITx — Machine Learning with Python (2024)',
-  'DeepLearning.AI — Machine Learning Specialization (2023)',
+  'MITx — Machine Learning with Python: from Linear Models to Deep Learning (2024)',
 ]
 
 export const projects = [
   { name: 'Pharmaceutical AI Assistant', cat: 'AI / Agents', img: '/portfolio/img/projects/product-4.png', desc: 'Agentic chatbot for pharmacists over Indonesia’s ISO medicine database — indications, contraindications, and more.', url: 'https://github.com/Officiel-TinkerThink/Pharma-ai-assistant' },
+  { name: 'AKIRA — AI Knowledge Repository', cat: 'AI / Agents', img: '/portfolio/img/projects/akira.svg', desc: 'Pipeline that continuously cleans, chunks, embeds and indexes verified docs into a vector DB, evaluating indexing quality via RAG metrics for a trustworthy knowledge base.', url: 'https://github.com/Officiel-TinkerThink' },
   { name: 'Document Portal', cat: 'AI / Agents', img: '/portfolio/img/projects/product-5.png', desc: 'AI for document diffing, analysis, metadata, and document-based chat (RAG).', url: 'https://github.com/Officiel-TinkerThink/document_portal' },
+  { name: 'Bottlecap Detection', cat: 'Machine Learning', img: '/portfolio/img/projects/bottlecap.svg', desc: 'Real-time YOLOv11n object detection (3-class) for bottlecaps — 99.5% mAP@50, ~11ms latency, edge-optimized for Raspberry Pi 5.', url: 'https://github.com/Officiel-TinkerThink' },
   { name: 'Traffic Sign Classification', cat: 'Machine Learning', img: '/portfolio/img/projects/product-1.jpg', desc: 'Computer-vision model classifying road signs at 92% accuracy.', url: 'https://github.com/Officiel-TinkerThink/Traffic-Sign-Classification' },
   { name: 'Attention Mask', cat: 'Machine Learning', img: '/portfolio/img/projects/product-2.png', desc: 'Attention-based model predicting masked words in a sequence.', url: 'https://github.com/Officiel-TinkerThink/Attention' },
   { name: 'Bank Marketing Campaign', cat: 'Data', img: '/portfolio/img/projects/app-1.jpg', desc: 'Predictive model identifying clients likely to deposit — lifting net revenue.', url: 'https://github.com/Officiel-TinkerThink/BarracudaGroup_DTI_01_FinalProject' },
   { name: 'Hotel Booking Cancellation', cat: 'Data', img: '/portfolio/img/projects/app-2.jpg', desc: 'Forecasting cancellation risk, cutting revenue loss ~74.4%.', url: 'https://github.com/Officiel-TinkerThink/Hotel-Booking-Demand' },
   { name: 'AI-assisted Minesweeper', cat: 'AI / Agents', img: '/portfolio/img/projects/product-3.jpg', desc: 'Pattern-analyzing assistant that flags mines and suggests safe moves.', url: 'https://github.com/Officiel-TinkerThink/AI-assisted-Minesweeper' },
   { name: 'AI Tic-Tac-Toe', cat: 'Apps / Games', img: '/portfolio/img/projects/branding-3.jpg', desc: 'Minimax-based adaptive opponent that anticipates and counters moves.', url: 'https://github.com/Officiel-TinkerThink/AI-against-Tic-Tac-Toe' },
+  { name: 'Home World', cat: 'AI / Agents', img: '/portfolio/img/projects/home-world.svg', desc: 'Custom text-based game environment for testing reinforcement-learning control policies via text commands.', url: 'https://github.com/Officiel-TinkerThink' },
+  { name: 'AI-versus Nim', cat: 'Apps / Games', img: '/portfolio/img/projects/nim.svg', desc: 'Self-play reinforcement-learning AI for the game of Nim that evolves into a strong competitor.', url: 'https://github.com/Officiel-TinkerThink' },
+  { name: 'Automatic Review Analyzer', cat: 'Machine Learning', img: '/portfolio/img/projects/review.svg', desc: 'NLP sentiment classifier that tags customer reviews as positive or negative at scale.', url: 'https://github.com/Officiel-TinkerThink' },
+  { name: 'Netflix Movie Rating Prediction', cat: 'Data', img: '/portfolio/img/projects/netflix.svg', desc: 'Collaborative-filtering model using EM with Gaussian mixtures to estimate personalized Netflix ratings.', url: 'https://github.com/Officiel-TinkerThink' },
   { name: 'NYC TLC Data Analysis', cat: 'Data', img: '/portfolio/img/projects/app-3.jpg', desc: 'Root-cause analysis of taxi revenue discrepancies across vendors.', url: 'https://github.com/Officiel-TinkerThink/NYC-TLC-Data-Analysis' },
 ]
