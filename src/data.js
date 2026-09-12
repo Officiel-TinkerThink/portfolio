@@ -68,6 +68,67 @@ export const certs = [
   { name: 'MITx — Probability', url: 'https://courses.edx.org/certificates/5da1b1635daa48f880bbae9957e60e0e' },
 ]
 
+
+// Interactive demos — every one is a static web app on GitHub Pages, so it can be embedded live.
+export const demos = [
+  {
+    id: 'roulette', name: 'American Roulette', kicker: 'Casino simulator + Monte-Carlo house-edge lab',
+    url: 'https://officiel-tinkerthink.github.io/American-Roulette-Betting/', repo: 'https://github.com/Officiel-TinkerThink/American-Roulette-Betting',
+    img: '/portfolio/img/demos/roulette.jpg', accent: '#f5d76e',
+    desc: 'Animated wheel, every bet on the layout, betting strategies (Martingale, D’Alembert, Fibonacci…), and a simulator that replays a layout for 100,000 spins to show why the house always wins.',
+    tips: ['Click a number, a split or “Red”, then hit SPIN', 'Open the Simulation tab and run 10,000 spins with Martingale', 'Turn on Neighbours mode and click a pocket on the wheel'],
+    stack: ['Vanilla JS', 'SVG animation', 'WebAudio', 'Monte-Carlo'],
+  },
+  {
+    id: 'nim', name: 'Nim vs AI', kicker: 'A Q-learning agent that teaches itself — trained live in your browser',
+    url: 'https://officiel-tinkerthink.github.io/AI-versus-Nim/', repo: 'https://github.com/Officiel-TinkerThink/AI-versus-Nim',
+    img: '/portfolio/img/demos/nim.jpg', accent: '#c8451f',
+    desc: 'Play misère Nim against a reinforcement-learning agent, watch its learning curve as it trains (agreement with the nim-sum solution, win rate vs random and vs perfect play), and peek at the Q-values behind every move.',
+    tips: ['Turn on Coach mode to see the nim-sum math', 'Train tab → 50,000 games and watch the curve', 'Let the AI start and try to beat the perfect player'],
+    stack: ['Q-learning', 'ε-greedy', 'SVG', 'Vanilla JS'],
+  },
+  {
+    id: 'minesweeper', name: 'AI-assisted Minesweeper', kicker: 'A copilot that shows exactly what it knows',
+    url: 'https://officiel-tinkerthink.github.io/AI-assisted-Minesweeper/', repo: 'https://github.com/Officiel-TinkerThink/AI-assisted-Minesweeper',
+    img: '/portfolio/img/demos/minesweeper.jpg', accent: '#2563eb',
+    desc: 'Classic Minesweeper with a knowledge-based solver: cells it has proven safe or mined are tinted, an exact-enumeration engine puts a mine probability on every cell, and a benchmark pits the logic solver against the probabilistic one.',
+    tips: ['Reveal a few cells, then switch on the probability heatmap', 'Press Auto-play and watch it reason', 'Benchmark tab: compare solvers on Expert'],
+    stack: ['Propositional inference', 'Exact enumeration', 'Vanilla JS'],
+  },
+  {
+    id: 'tictactoe', name: 'Tic-Tac-Toe vs Minimax', kicker: 'An unbeatable AI that shows its thinking',
+    url: 'https://officiel-tinkerthink.github.io/AI-against-Tic-Tac-Toe/', repo: 'https://github.com/Officiel-TinkerThink/AI-against-Tic-Tac-Toe',
+    img: '/portfolio/img/demos/tictactoe.jpg', accent: '#22d3ee',
+    desc: 'Every move labelled win / draw / loss, your moves graded, alpha-beta vs plain minimax node counts after each AI move, and an explorer for the whole game tree (255,168 games).',
+    tips: ['Play Hard and try to force a draw with every move rated “best”', 'Explore the tree tab → click through positions', 'Count the whole game tree'],
+    stack: ['Minimax', 'Alpha-beta pruning', 'SVG', 'Vanilla JS'],
+  },
+  {
+    id: 'crossword', name: 'Crossword CSP Solver', kicker: 'Watch AC-3 and backtracking fill a grid, step by step',
+    url: 'https://officiel-tinkerthink.github.io/AI-solved-Crossword/', repo: 'https://github.com/Officiel-TinkerThink/AI-solved-Crossword',
+    img: '/portfolio/img/demos/crossword.jpg', accent: '#1f5fd6',
+    desc: 'A constraint-satisfaction solver animated on real crossword grids — node consistency, arc consistency, MRV / degree / LCV heuristics and maintained arc consistency — plus a grid editor and a word-fit game for humans.',
+    tips: ['Pick the Hard puzzle and press Run', 'Compare all heuristic settings', 'Play tab: fit the words yourself'],
+    stack: ['CSP', 'AC-3', 'Backtracking', 'Vanilla JS'],
+  },
+  {
+    id: 'arithmathgeek', name: 'Arithmathgeek', kicker: 'A daily guess-the-equation puzzle',
+    url: 'https://officiel-tinkerthink.github.io/CS50P-Final-Project/', repo: 'https://github.com/Officiel-TinkerThink/CS50P-Final-Project',
+    img: '/portfolio/img/demos/arithmathgeek.jpg', accent: '#6d28d9',
+    desc: 'Nerdle-style: six tries to find the hidden equation, three difficulties, a daily puzzle that is the same for everyone, shareable emoji results, and a counter of how many equations still fit your clues.',
+    tips: ['Try today’s Medium daily', 'Watch “Still possible” shrink with each guess', 'Share your result'],
+    stack: ['Game design', 'Seeded RNG', 'Vanilla JS'],
+  },
+  {
+    id: 'homeworld', name: 'Home World', kicker: 'A text game for reinforcement learning — play it, then train agents on it',
+    url: 'https://officiel-tinkerthink.github.io/Home-World-Game/', repo: 'https://github.com/Officiel-TinkerThink/Home-World-Game',
+    img: '/portfolio/img/demos/homeworld.jpg', accent: '#c2410c',
+    desc: 'Explore a house from text descriptions alone, then train tabular, linear and deep Q-learning agents in the browser and watch them solve quests with their Q-values on screen.',
+    tips: ['Play a quest without revealing the map', 'Train tab: tabular, then DQN, then linear — compare curves', 'Watch the DQN play'],
+    stack: ['Tabular Q', 'Linear Q', 'DQN (hand-written MLP)', 'Vanilla JS'],
+  },
+]
+
 export const projects = [
   { name: 'Pharmaceutical AI Assistant', cat: 'AI Agents', img: '/portfolio/img/projects/pharma.svg', desc: 'Agentic chatbot for pharmacists over Indonesia’s ISO medicine database — indications, contraindications, and more.', url: 'https://github.com/Officiel-TinkerThink/Pharma-ai-assistant' },
   { name: 'AKIRA — AI Knowledge Repository', cat: 'AI Agents', tags: ['hot'], img: '/portfolio/img/projects/akira.svg', desc: 'Pipeline that continuously cleans, chunks, embeds and indexes verified docs into a vector DB, evaluating indexing quality via RAG metrics for a trustworthy knowledge base.', url: '' },
@@ -80,10 +141,13 @@ export const projects = [
   { name: 'Attention Mask', cat: 'Machine Learning', img: '/portfolio/img/projects/attention.svg', desc: 'Attention-based model predicting masked words in a sequence.', url: 'https://github.com/Officiel-TinkerThink/Attention' },
   { name: 'Bank Marketing Campaign', cat: 'Data', img: '/portfolio/img/projects/bank-marketing.svg', desc: 'Predictive model identifying clients likely to deposit — lifting net revenue.', url: 'https://github.com/Officiel-TinkerThink/BarracudaGroup_DTI_01_FinalProject' },
   { name: 'Hotel Booking Cancellation', cat: 'Data', img: '/portfolio/img/projects/hotel-booking.svg', desc: 'Forecasting cancellation risk, cutting revenue loss ~74.4%.', url: 'https://github.com/Officiel-TinkerThink/Hotel-Booking-Demand' },
-  { name: 'AI-assisted Minesweeper', cat: 'AI Games', img: '/portfolio/img/projects/minesweeper.svg', desc: 'Pattern-analyzing assistant that flags mines and suggests safe moves.', url: 'https://github.com/Officiel-TinkerThink/AI-assisted-Minesweeper' },
-  { name: 'AI Tic-Tac-Toe', cat: 'AI Games', img: '/portfolio/img/projects/tic-tac-toe.svg', desc: 'Minimax-based adaptive opponent that anticipates and counters moves.', url: 'https://github.com/Officiel-TinkerThink/AI-against-Tic-Tac-Toe' },
-  { name: 'Home World', cat: 'AI Games', img: '/portfolio/img/projects/home-world.svg', desc: 'Custom text-based game environment for testing reinforcement-learning control policies via text commands.', url: 'https://github.com/Officiel-TinkerThink' },
-  { name: 'AI-versus Nim', cat: 'AI Games', img: '/portfolio/img/projects/nim.svg', desc: 'Self-play reinforcement-learning AI for the game of Nim that evolves into a strong competitor.', url: 'https://github.com/Officiel-TinkerThink' },
+  { name: 'AI-assisted Minesweeper', cat: 'AI Games', demo: 'minesweeper', img: '/portfolio/img/demos/minesweeper.jpg', desc: 'Minesweeper with a copilot that shows its reasoning: knowledge overlay, exact mine probabilities, auto-play and a solver benchmark.', url: 'https://github.com/Officiel-TinkerThink/AI-assisted-Minesweeper' },
+  { name: 'Tic-Tac-Toe vs Minimax', cat: 'AI Games', demo: 'tictactoe', img: '/portfolio/img/demos/tictactoe.jpg', desc: 'Unbeatable minimax opponent that shows every move’s value, grades your moves, and lets you explore the whole game tree.', url: 'https://github.com/Officiel-TinkerThink/AI-against-Tic-Tac-Toe' },
+  { name: 'Home World', cat: 'AI Games', demo: 'homeworld', img: '/portfolio/img/demos/homeworld.jpg', desc: 'Text-based RL environment: play it, train tabular / linear / deep Q-learning agents live, and watch them play.', url: 'https://github.com/Officiel-TinkerThink/Home-World-Game' },
+  { name: 'Nim vs AI', cat: 'AI Games', demo: 'nim', img: '/portfolio/img/demos/nim.jpg', desc: 'Self-play Q-learning agent you can train in the browser, with a live learning curve and a coach that reveals the nim-sum strategy.', url: 'https://github.com/Officiel-TinkerThink/AI-versus-Nim' },
+  { name: 'Crossword CSP Solver', cat: 'AI Games', demo: 'crossword', img: '/portfolio/img/demos/crossword.jpg', desc: 'Animated constraint-satisfaction solver (AC-3 + backtracking with MRV / LCV / MAC), a grid editor and a word-fit game.', url: 'https://github.com/Officiel-TinkerThink/AI-solved-Crossword' },
+  { name: 'American Roulette', cat: 'Apps', demo: 'roulette', img: '/portfolio/img/demos/roulette.jpg', desc: 'Casino simulator with betting strategies, session stats and a Monte-Carlo house-edge lab.', url: 'https://github.com/Officiel-TinkerThink/American-Roulette-Betting' },
+  { name: 'Arithmathgeek', cat: 'Apps', demo: 'arithmathgeek', img: '/portfolio/img/demos/arithmathgeek.jpg', desc: 'Nerdle-style daily guess-the-equation puzzle with shareable results and a clue-consistency counter.', url: 'https://github.com/Officiel-TinkerThink/CS50P-Final-Project' },
   { name: 'Automatic Review Analyzer', cat: 'Machine Learning', img: '/portfolio/img/projects/review.svg', desc: 'NLP sentiment classifier that tags customer reviews as positive or negative at scale.', url: 'https://github.com/Officiel-TinkerThink' },
   { name: 'Netflix Movie Rating Prediction', cat: 'Data', img: '/portfolio/img/projects/netflix.svg', desc: 'Collaborative-filtering model using EM with Gaussian mixtures to estimate personalized Netflix ratings.', url: 'https://github.com/Officiel-TinkerThink' },
   { name: 'NYC TLC Data Analysis', cat: 'Data', img: '/portfolio/img/projects/nyc-tlc.svg', desc: 'Root-cause analysis of taxi revenue discrepancies across vendors.', url: 'https://github.com/Officiel-TinkerThink/NYC-TLC-Data-Analysis' },
