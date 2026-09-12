@@ -2,7 +2,6 @@ import { motion } from 'framer-motion'
 import { profile } from '../data'
 
 const links = [
-  { href: '#playground', label: 'Playground' },
   { href: '#about', label: 'About' },
   { href: '#services', label: 'Services' },
   { href: '#skills', label: 'Skills' },

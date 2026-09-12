@@ -5,7 +5,7 @@ import Services from './components/Services'
 import Skills from './components/Skills'
 import Resume from './components/Resume'
 import Portfolio from './components/Portfolio'
-import Playground from './components/Playground'
+import DemoModal from './components/DemoModal'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
@@ -15,7 +15,6 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
-        <Playground />
         <About />
         <Services />
         <Skills />
@@ -24,6 +23,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <DemoModal />
     </>
   )
 }

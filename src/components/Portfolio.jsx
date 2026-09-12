@@ -18,7 +18,7 @@ export default function Portfolio() {
     <section id="portfolio" className="section">
       <span className="eyebrow">Portfolio</span>
       <h2 className="text-3xl font-bold md:text-4xl">Selected work</h2>
-      <p className="mt-3 max-w-xl text-muted">AI & software projects. Cards marked <span className="font-mono text-accent">LIVE</span> open in the playground above; the rest link to the source or site.</p>
+      <p className="mt-3 max-w-xl text-muted">AI & software projects — click any card to explore the source or live site. Cards marked <span className="font-mono text-accent">LIVE</span> run right here.</p>
       <div className="mt-8 flex flex-wrap gap-2">
         {cats.map((c) => (
           <button
@@ -74,7 +74,7 @@ export default function Portfolio() {
               <div className="relative overflow-hidden">
                 <img src={p.img} alt={p.name} className="h-44 w-full object-cover object-top transition duration-500 group-hover:scale-105" loading="lazy" />
                 <span className="absolute right-3 top-3 flex items-center gap-1.5 rounded-full bg-ink/80 px-2.5 py-1 text-xs font-mono text-accent"><span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />LIVE</span>
-                <span className="absolute inset-0 flex items-center justify-center bg-ink/60 opacity-0 transition group-hover:opacity-100"><span className="btn-primary !px-4 !py-2 text-sm">▶ Play in the playground</span></span>
+                <span className="absolute inset-0 flex items-center justify-center bg-ink/60 opacity-0 transition group-hover:opacity-100"><span className="btn-primary !px-4 !py-2 text-sm">▶ Try it live</span></span>
               </div>
               <div className="p-5">
                 <span className="text-xs font-mono text-accent">{(p.cats || [p.cat])[0]}</span>

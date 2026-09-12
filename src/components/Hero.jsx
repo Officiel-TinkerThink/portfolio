@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { profile, demos } from '../data'
+import { profile } from '../data'
 
 const roles = ['AI Engineer', 'LLM & Agent Developer', 'Software Developer', 'ML Engineer']
 
@@ -33,10 +33,9 @@ export default function Hero() {
           </p>
           <p className="mt-6 max-w-xl text-lg text-muted">{profile.summary}</p>
           <div className="mt-8 flex flex-wrap gap-4">
-            <a href="#playground" className="btn-primary">▶ Try the live demos</a>
-            <a href="#services" className="btn-ghost">Hire me for AI work →</a>
+            <a href="#services" className="btn-primary">Hire me for AI work →</a>
+            <a href="#portfolio" className="btn-ghost">See my work</a>
           </div>
-          <DemoStrip />
           <div className="mt-10 flex gap-5 text-slate-400">
             <a href={profile.socials.github} target="_blank" rel="noreferrer" className="transition hover:text-accent"><SocialIcon name="github" className="w-6 h-6" /></a>
             <a href={profile.socials.linkedin} target="_blank" rel="noreferrer" className="transition hover:text-accent"><SocialIcon name="linkedin" className="w-6 h-6" /></a>
@@ -66,36 +65,5 @@ function RotatingRoles({ roles }) {
     >
       {roles[i]}
     </motion.span>
-  )
-}
-
-function DemoStrip() {
-  const open = (id) => window.dispatchEvent(new CustomEvent('open-demo', { detail: id }))
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.7, delay: 0.4 }}
-      className="mt-12"
-    >
-      <div className="mb-3 flex items-center gap-3 text-xs font-mono uppercase tracking-widest text-slate-500">
-        <span className="h-2 w-2 animate-pulse rounded-full bg-accent" />
-        {demos.length} interactive projects running in the browser — click one
-      </div>
-      <div className="flex min-w-0 max-w-full gap-3 overflow-x-auto pb-2 [scrollbar-width:thin]">
-        {demos.map((d) => (
-          <button
-            key={d.id}
-            onClick={() => open(d.id)}
-            className="group relative w-44 shrink-0 overflow-hidden rounded-xl border border-white/10 bg-panel/60 text-left transition hover:-translate-y-1 hover:border-accent/60"
-            title={`Open ${d.name} in the playground`}
-          >
-            <img src={d.img} alt="" className="h-24 w-full object-cover object-top opacity-90 transition group-hover:opacity-100" loading="lazy" />
-            <span className="block truncate px-3 py-2 text-xs font-semibold text-slate-200">{d.name}</span>
-            <span className="absolute right-2 top-2 rounded-full bg-ink/80 px-2 py-0.5 text-[10px] font-mono text-accent">LIVE</span>
-          </button>
-        ))}
-      </div>
-    </motion.div>
   )
 }
