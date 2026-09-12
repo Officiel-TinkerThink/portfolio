@@ -37,7 +37,7 @@ export const experience = [
     points: [
       'Building and shipping data-science solutions that turn business data into measurable impact.',
     ] },
-  { role: 'Data Scientist (Freelance)', org: 'Manulife', period: 'Dec 2025 – Apr 2026', loc: 'Remote',
+  { role: 'Data Scientist (Contract)', org: 'Manulife', period: 'Dec 2025 – Apr 2026', loc: 'Remote',
     points: [
       'Designed and built an end-to-end pipeline for an AI Knowledge Base.',
       'Built a robust evaluation framework measuring indexing quality, retrieval performance, and system trustworthiness.',
