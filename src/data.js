@@ -127,6 +127,38 @@ export const demos = [
     tips: ['Play a quest without revealing the map', 'Train tab: tabular, then DQN, then linear — compare curves', 'Watch the DQN play'],
     stack: ['Tabular Q', 'Linear Q', 'DQN (hand-written MLP)', 'Vanilla JS'],
   },
+  {
+    id: 'digits', name: 'Digits from Scratch', kicker: 'Neural nets with hand-written backprop — draw a digit',
+    url: 'https://officiel-tinkerthink.github.io/digit_recognizer_with_numpy/', repo: 'https://github.com/Officiel-TinkerThink/digit_recognizer_with_numpy',
+    img: '/portfolio/img/demos/digits.jpg', accent: '#38bdf8',
+    desc: 'Draw a digit and watch a linear model, an MLP and a small CNN — implemented from scratch, no framework — recognise it, with every layer’s activations shown. Train them yourself in the browser on MNIST and look at the weights they learned.',
+    tips: ['Draw a 7, then switch models and compare confidence', 'Train tab: the notebook’s 4-vs-9 task with noise', 'Inside tab: the linear model’s class templates'],
+    stack: ['Backprop by hand', 'CNN', 'Vanilla JS'],
+  },
+  {
+    id: 'reviews', name: 'Review Analyzer', kicker: 'Perceptron, average perceptron and Pegasos on real reviews',
+    url: 'https://officiel-tinkerthink.github.io/Automatic-Review-Analyzer/', repo: 'https://github.com/Officiel-TinkerThink/Automatic-Review-Analyzer',
+    img: '/portfolio/img/demos/reviews.jpg', accent: '#0f766e',
+    desc: 'Three linear classifiers written from scratch and trained live on 4,000 food reviews. Type a review, get the verdict and see exactly which words decided it; compare the algorithms as they learn and sweep their hyper-parameters.',
+    tips: ['Type a review and watch the words light up', 'Train & compare → Sweep T and λ', 'Reviews tab: filter to the mistakes'],
+    stack: ['Perceptron', 'Pegasos / SVM', 'Bag of words', 'Vanilla JS'],
+  },
+  {
+    id: 'eplsql', name: 'Premier League SQL', kicker: 'A relational database you can query in the browser',
+    url: 'https://officiel-tinkerthink.github.io/English-Premier-League-Database/', repo: 'https://github.com/Officiel-TinkerThink/English-Premier-League-Database',
+    img: '/portfolio/img/demos/eplsql.jpg', accent: '#3d195b',
+    desc: 'SQLite compiled to WebAssembly with a seeded season of 380 matches: a SQL console with EXPLAIN, the schema and ER diagram, a league table computed by a view, and eight checked SQL challenges.',
+    tips: ['Run the golden-boot query, then Explain it', 'Season tab → show SQL on the standings', 'Solve a challenge or two'],
+    stack: ['SQL', 'SQLite (WASM)', 'Schema design'],
+  },
+  {
+    id: 'attention', name: 'Attention', kicker: 'BERT in plain JavaScript, with every attention head visible',
+    url: 'https://officiel-tinkerthink.github.io/Attention/', repo: 'https://github.com/Officiel-TinkerThink/Attention',
+    img: '/portfolio/img/demos/attention.jpg', accent: '#f5c518',
+    desc: 'A 41-million-parameter BERT, int8-quantised to 42 MB, running in the browser with no ML library. Fill in the [MASK], then open any of the 64 attention heads to see which words the model looked at.',
+    tips: ['Try “She poured a cup of hot [MASK]”', 'Attention heads → layer 6, then hover the [MASK] row', 'Spot the diagonal “previous word” heads'],
+    stack: ['Transformer', 'BERT', 'Quantisation', 'Vanilla JS'],
+  },
 ]
 
 export const projects = [
@@ -138,7 +170,8 @@ export const projects = [
 
   { name: 'Bottlecap Detection', cat: 'Machine Learning', img: '/portfolio/img/projects/bottlecap.svg', desc: 'Real-time YOLOv11n object detection (3-class) for bottlecaps — 99.5% mAP@50, ~11ms latency, edge-optimized for Raspberry Pi 5.', url: 'https://github.com/Officiel-TinkerThink' },
   { name: 'Traffic Sign Classification', cat: 'Machine Learning', img: '/portfolio/img/projects/traffic-sign.svg', desc: 'Computer-vision model classifying road signs at 92% accuracy.', url: 'https://github.com/Officiel-TinkerThink/Traffic-Sign-Classification' },
-  { name: 'Attention Mask', cat: 'Machine Learning', img: '/portfolio/img/projects/attention.svg', desc: 'Attention-based model predicting masked words in a sequence.', url: 'https://github.com/Officiel-TinkerThink/Attention' },
+  { name: 'Attention', cat: 'Machine Learning', demo: 'attention', img: '/portfolio/img/demos/attention.jpg', desc: 'BERT masked-word prediction and all 64 attention-head diagrams, running in the browser in plain JavaScript.', url: 'https://github.com/Officiel-TinkerThink/Attention' },
+  { name: 'Digits from Scratch', cat: 'Machine Learning', demo: 'digits', img: '/portfolio/img/demos/digits.jpg', desc: 'Draw a digit — linear, MLP and CNN models with hand-written backprop recognise it; train them live and inspect the weights.', url: 'https://github.com/Officiel-TinkerThink/digit_recognizer_with_numpy' },
   { name: 'Bank Marketing Campaign', cat: 'Data', img: '/portfolio/img/projects/bank-marketing.svg', desc: 'Predictive model identifying clients likely to deposit — lifting net revenue.', url: 'https://github.com/Officiel-TinkerThink/BarracudaGroup_DTI_01_FinalProject' },
   { name: 'Hotel Booking Cancellation', cat: 'Data', img: '/portfolio/img/projects/hotel-booking.svg', desc: 'Forecasting cancellation risk, cutting revenue loss ~74.4%.', url: 'https://github.com/Officiel-TinkerThink/Hotel-Booking-Demand' },
   { name: 'AI-assisted Minesweeper', cat: 'AI Games', demo: 'minesweeper', img: '/portfolio/img/demos/minesweeper.jpg', desc: 'Minesweeper with a copilot that shows its reasoning: knowledge overlay, exact mine probabilities, auto-play and a solver benchmark.', url: 'https://github.com/Officiel-TinkerThink/AI-assisted-Minesweeper' },
@@ -148,7 +181,8 @@ export const projects = [
   { name: 'Crossword CSP Solver', cat: 'AI Games', demo: 'crossword', img: '/portfolio/img/demos/crossword.jpg', desc: 'Animated constraint-satisfaction solver (AC-3 + backtracking with MRV / LCV / MAC), a grid editor and a word-fit game.', url: 'https://github.com/Officiel-TinkerThink/AI-solved-Crossword' },
   { name: 'American Roulette', cat: 'Apps', demo: 'roulette', img: '/portfolio/img/demos/roulette.jpg', desc: 'Casino simulator with betting strategies, session stats and a Monte-Carlo house-edge lab.', url: 'https://github.com/Officiel-TinkerThink/American-Roulette-Betting' },
   { name: 'Arithmathgeek', cat: 'Apps', demo: 'arithmathgeek', img: '/portfolio/img/demos/arithmathgeek.jpg', desc: 'Nerdle-style daily guess-the-equation puzzle with shareable results and a clue-consistency counter.', url: 'https://github.com/Officiel-TinkerThink/CS50P-Final-Project' },
-  { name: 'Automatic Review Analyzer', cat: 'Machine Learning', img: '/portfolio/img/projects/review.svg', desc: 'NLP sentiment classifier that tags customer reviews as positive or negative at scale.', url: 'https://github.com/Officiel-TinkerThink' },
+  { name: 'Review Analyzer', cat: 'Machine Learning', demo: 'reviews', img: '/portfolio/img/demos/reviews.jpg', desc: 'Perceptron, average perceptron and Pegasos sentiment classifiers trained live on 4,000 reviews, with word-level explanations.', url: 'https://github.com/Officiel-TinkerThink/Automatic-Review-Analyzer' },
   { name: 'Netflix Movie Rating Prediction', cat: 'Data', img: '/portfolio/img/projects/netflix.svg', desc: 'Collaborative-filtering model using EM with Gaussian mixtures to estimate personalized Netflix ratings.', url: 'https://github.com/Officiel-TinkerThink' },
+  { name: 'Premier League SQL', cat: 'Data', demo: 'eplsql', img: '/portfolio/img/demos/eplsql.jpg', desc: 'Relational schema for matches and goals with an in-browser SQLite playground, ER diagram, views and SQL challenges.', url: 'https://github.com/Officiel-TinkerThink/English-Premier-League-Database' },
   { name: 'NYC TLC Data Analysis', cat: 'Data', img: '/portfolio/img/projects/nyc-tlc.svg', desc: 'Root-cause analysis of taxi revenue discrepancies across vendors.', url: 'https://github.com/Officiel-TinkerThink/NYC-TLC-Data-Analysis' },
 ]
