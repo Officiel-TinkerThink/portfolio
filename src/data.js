@@ -159,6 +159,14 @@ export const demos = [
     tips: ['Try “She poured a cup of hot [MASK]”', 'Attention heads → layer 6, then hover the [MASK] row', 'Spot the diagonal “previous word” heads'],
     stack: ['Transformer', 'BERT', 'Quantisation', 'Vanilla JS'],
   },
+  {
+    id: 'gptlike', name: 'GPT from Scratch', kicker: 'A tiny GPT trained from scratch — watch it think, one token at a time',
+    url: 'https://officiel-tinkerthink.github.io/GPT-like/', repo: 'https://github.com/Officiel-TinkerThink/GPT-like',
+    img: '/portfolio/img/demos/gptlike.jpg', accent: '#34d399',
+    desc: 'A 2.2-million-parameter decoder-only transformer, written in PyTorch and re-implemented in plain JavaScript with a KV cache. Generate text and see the full next-token distribution, steer it word by word, open any attention head, and compare checkpoints from epoch 1 (word soup) to epoch 300 (memorised the story).',
+    tips: ['Tick “I pick each token” and steer the story', 'Switch the checkpoint to epoch 1, then 300', 'Attention tab → hover the matrix, click other heads'],
+    stack: ['Transformer', 'GPT', 'PyTorch', 'Vanilla JS'],
+  },
 ]
 
 export const projects = [
@@ -170,6 +178,7 @@ export const projects = [
 
   { name: 'Bottlecap Detection', cat: 'Machine Learning', img: '/portfolio/img/projects/bottlecap.svg', desc: 'Real-time YOLOv11n object detection (3-class) for bottlecaps — 99.5% mAP@50, ~11ms latency, edge-optimized for Raspberry Pi 5.', url: 'https://github.com/Officiel-TinkerThink' },
   { name: 'Traffic Sign Classification', cat: 'Machine Learning', img: '/portfolio/img/projects/traffic-sign.svg', desc: 'Computer-vision model classifying road signs at 92% accuracy.', url: 'https://github.com/Officiel-TinkerThink/Traffic-Sign-Classification' },
+  { name: 'GPT from Scratch', cat: 'Machine Learning', demo: 'gptlike', img: '/portfolio/img/demos/gptlike.jpg', desc: 'Decoder-only transformer built from scratch; a tiny trained model runs in the browser with visible next-token probabilities, token steering and attention heatmaps.', url: 'https://github.com/Officiel-TinkerThink/GPT-like' },
   { name: 'Attention', cat: 'Machine Learning', demo: 'attention', img: '/portfolio/img/demos/attention.jpg', desc: 'BERT masked-word prediction and all 64 attention-head diagrams, running in the browser in plain JavaScript.', url: 'https://github.com/Officiel-TinkerThink/Attention' },
   { name: 'Digits from Scratch', cat: 'Machine Learning', demo: 'digits', img: '/portfolio/img/demos/digits.jpg', desc: 'Draw a digit — linear, MLP and CNN models with hand-written backprop recognise it; train them live and inspect the weights.', url: 'https://github.com/Officiel-TinkerThink/digit_recognizer_with_numpy' },
   { name: 'Bank Marketing Campaign', cat: 'Data', img: '/portfolio/img/projects/bank-marketing.svg', desc: 'Predictive model identifying clients likely to deposit — lifting net revenue.', url: 'https://github.com/Officiel-TinkerThink/BarracudaGroup_DTI_01_FinalProject' },
